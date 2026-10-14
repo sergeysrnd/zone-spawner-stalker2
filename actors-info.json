@@ -1,0 +1,10 @@
+{
+  "Source": "Local ObjPrototypes.cfg.bin + NPCPrototypes.cfg.bin + Game-ru.locres",
+  "ObjSHA256": "82889cf904cff07bcba21480cfd200cbbd34c69bd3120facddeff776f33532ab",
+  "NPCSHA256": "4220d70f5cd921872499a0b1bacf79e9e95e58d781efc31c87c98ddcd52fee27",
+  "Counts": {
+    "Мутанты": 37,
+    "Персонажи": 1598
+  },
+  "RuntimeSpawnValidated": false
+}

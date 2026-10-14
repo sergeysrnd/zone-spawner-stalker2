@@ -1,0 +1,24 @@
+# Runtime state and personal settings
+/bridge/
+/installed-manifest.json
+/favorites.txt
+/teleport-points.json
+/mod/Scripts/config.lua
+/removed-install-*/
+/install-stage-*/
+# Build/research artifacts and game files
+/build/
+/dist/
+__pycache__/
+*.pyc
+*.pdb
+*.obj
+*.exp
+*.lib
+*.pak
+*.ucas
+*.utoc
+*.cfg.bin
+*.locres
+.env*
+*.log

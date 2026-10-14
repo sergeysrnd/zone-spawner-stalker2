@@ -1,0 +1,51 @@
+{
+  "steamBuild": "25382007",
+  "gameExeSHA256": "61BC1E030740CEBC30CF1DAD0C86CF65E39E12FF0500225821D684181E08D56B",
+  "count": 840,
+  "source": "Local ItemPrototypes.cfg.bin + Russian Game.locres; category hints from MIT-licensed Rianvy/Stalker2Control",
+  "prototypeSHA256": "ce6a384e9b379213159ffa6cbbbd782549edbd478a972c55bd28db386e5077cd",
+  "runtimeSpawnValidated": false,
+  "artifactRaritySource": "Exact Rarity field in local version-2 ItemPrototypes.cfg.bin; Epic displayed as Legendary",
+  "artifactCount": 75,
+  "artifactRarities": {
+    "Необычный": 16,
+    "Обычный": 36,
+    "Редкий": 12,
+    "Легендарный": 11
+  },
+  "compatibilitySource": "Exact FittingWeaponsSIDs field in local ItemPrototypes.cfg.bin",
+  "attachmentCompatibilityCount": 47,
+  "artifactPropertiesSource": "Local flattened ItemPrototypes.cfg.bin, EffectPrototypes.cfg.bin and Russian Game.locres; effects, display flags, levels and benefit copied from this installation",
+  "effectPrototypesSHA256": "ca98cd3c6b310db7a8b9680c2040c7465c9d9ad268547d05cde05288a9858d45",
+  "artifactPropertiesCount": 74,
+  "artifactSpecialCount": 6,
+  "weaponCaliberSource": "ItemPrototypes.GeneralWeaponSetup -> WeaponGeneralSetupPrototypes.AmmoCaliber; display text from local Russian Game.locres",
+  "weaponGeneralSetupSHA256": "6d6c66fb2a1b013dd588bc1dee28dc250cec1c4ab3f9969a256b122861f9de9a",
+  "weaponCaliberCount": 69,
+  "ammoCompatibilitySource": "Exact FittingWeaponsSIDs plus catalog weapon setups with matching AmmoCaliber and AmmoTypeProjectiles; attached/integrated launchers retained from explicit lists; base configuration",
+  "ammoCount": 34,
+  "ammoCompatibilityCount": 31,
+  "ammoCompatibilityMissingIds": [
+    "A762A",
+    "A762D",
+    "A762E"
+  ],
+  "ammoCalibers": {
+    ".308": 3,
+    ".45": 3,
+    "12/70": 3,
+    "5.45x39": 3,
+    "5.56x45": 4,
+    "7.62x39": 3,
+    "7.62x54": 3,
+    "9x18": 2,
+    "9x19": 2,
+    "9x39": 4,
+    "40×46": 1,
+    "ВОГ-25": 1,
+    "Батареи": 1,
+    "ПГ-7В": 1
+  },
+  "descriptionsIncluded": false,
+  "distributionNote": "Only identifiers and factual catalog metadata are included; full game descriptions must be imported locally."
+}
