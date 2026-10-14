@@ -1,0 +1,17 @@
+{
+  "steamBuild": "25382007",
+  "count": 15,
+  "landings": 12,
+  "technicianProfiles": 16,
+  "source": "Local FastTravelLocationPrototypes.PlayerLocation, NPCPrototypes.Upgrades Enabled=true, ItemPrototypes/WeaponGeneralSetupPrototypes.UpgradePrototypeSIDs; names from Russian Game.locres",
+  "excludedUpgrades": [
+    "FaustPsyResist_Quest_1_1"
+  ],
+  "caveats": "Static capability intersections, including attachment installation; no live quest/blueprint/reputation/NPC checks. Counts are not simultaneously installable branches. Landings not yet individually tested in game.",
+  "prototypeSHA256": {
+    "FastTravelLocationPrototypes": "031de23262b3eb9997332de1cb7536b02bd362bb1a6eddb5e0dac2a1c2fa6ed5",
+    "NPCPrototypes": "4220d70f5cd921872499a0b1bacf79e9e95e58d781efc31c87c98ddcd52fee27",
+    "ItemPrototypes": "ce6a384e9b379213159ffa6cbbbd782549edbd478a972c55bd28db386e5077cd",
+    "WeaponGeneralSetupPrototypes": "6d6c66fb2a1b013dd588bc1dee28dc250cec1c4ab3f9969a256b122861f9de9a"
+  }
+}
