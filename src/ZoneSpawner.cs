@@ -80,6 +80,7 @@ namespace ZoneSpawner {
    if (File.Exists(file)) File.Replace(tmp,file,null); else File.Move(tmp,file);
   }
   public static void SelfTest(string root) {
+   SetupTests.Run(root);
    var all=new JavaScriptSerializer().Deserialize<List<Item>>(File.ReadAllText(Path.Combine(root,"items.json"),Encoding.UTF8));
    if (all.Count<300 || all.Select(x=>x.Id).Distinct().Count()!=all.Count) throw new Exception("Catalog identity");
    var med=all.Single(x=>x.Id=="Medkit");

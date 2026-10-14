@@ -6,6 +6,7 @@
 /mod/Scripts/config.lua
 /removed-install-*/
 /install-stage-*/
+/dependencies/
 # Build/research artifacts and game files
 /build/
 /dist/
