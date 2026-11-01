@@ -1,0 +1,9 @@
+{
+  "count": 27,
+  "checkedOn": "2026-11-01",
+  "scope": "Base game and Banzai quest; not an exhaustive DLC catalog",
+  "source": "Factual place/code pairs from MIT Stalker2Control table and linked community walkthroughs; Russian navigation hints written for Zone Spawner",
+  "runtimeValidated": false,
+  "gameBuildPinned": false,
+  "notes": "Offline reference. Story, keys, power and keypad behavior may restrict entry; no live lock detection or game commands. Leading zeros retained as strings."
+}

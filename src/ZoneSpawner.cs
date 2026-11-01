@@ -304,6 +304,7 @@ namespace ZoneSpawner {
   }
   protected override void WndProc(ref Message m){if(m.Msg==0x0312&&m.WParam.ToInt32()==1){if(Visible && WindowState!=FormWindowState.Minimized)Hide();else OpenMenu();}base.WndProc(ref m);}
   public static void ReviewSelfTest(string root){
+   DoorCodesSelfTest(root);
    LocationData.SelfTest(root);
    LocationViewSelfTest(root);
    FeatureData.SelfTest(root);

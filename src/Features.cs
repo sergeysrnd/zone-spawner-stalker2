@@ -86,7 +86,7 @@ namespace ZoneSpawner {
   bool Interactive{get{return Visible&&WindowState!=FormWindowState.Minimized;}}
   InventoryEntry BagSelected{get{return bagGrid.CurrentRow==null?null:bagGrid.CurrentRow.Tag as InventoryEntry;}}
   ActorEntry ActorSelected{get{return actorGrid.CurrentRow==null?null:actorGrid.CurrentRow.Tag as ActorEntry;}}
-  TextBox FeatureSearch(){return mainTabs.SelectedTab==bagPage?bagSearch:mainTabs.SelectedTab==actorPage?actorSearch:mainTabs.SelectedTab==teleportPage?(teleportTargets.SelectedTab==locationTargets?locationSearch:pointName):search;}
+  TextBox FeatureSearch(){return mainTabs.SelectedTab==bagPage?bagSearch:mainTabs.SelectedTab==doorCodesPage?doorCodeSearch:mainTabs.SelectedTab==actorPage?actorSearch:mainTabs.SelectedTab==teleportPage?(teleportTargets.SelectedTab==locationTargets?locationSearch:pointName):search;}
   TableLayoutPanel FeatureLayout(TabPage page,int rows){page.BackColor=Bg;page.ForeColor=TextColor;var table=new TableLayoutPanel{Dock=DockStyle.Fill,Padding=new Padding(24),ColumnCount=1,RowCount=rows};page.Controls.Add(table);return table;}
   void FeatureLabel(Label label,string text){label.Text=text;label.Dock=DockStyle.Fill;label.ForeColor=TextColor;label.AutoEllipsis=true;}
   void FeatureText(TextBox box,string accessible){box.Width=320;box.BackColor=PanelColor;box.ForeColor=TextColor;box.AccessibleName=accessible;box.BorderStyle=BorderStyle.FixedSingle;}
@@ -99,9 +99,9 @@ namespace ZoneSpawner {
    view.DefaultCellStyle.BackColor=PanelColor;view.DefaultCellStyle.ForeColor=TextColor;view.DefaultCellStyle.SelectionBackColor=Color.FromArgb(60,76,50);view.DefaultCellStyle.SelectionForeColor=TextColor;view.ColumnHeadersDefaultCellStyle.BackColor=Bg;view.ColumnHeadersDefaultCellStyle.ForeColor=Accent;
   }
   void InitializeFeatures(){
-   Controls.Remove(layout);mainTabs.Dock=DockStyle.Fill;mainTabs.Font=Font;catalogPage.BackColor=Bg;catalogPage.Controls.Add(layout);mainTabs.TabPages.AddRange(new[]{catalogPage,bagPage,teleportPage,actorPage,journalPage});Controls.Add(mainTabs);
+   Controls.Remove(layout);mainTabs.Dock=DockStyle.Fill;mainTabs.Font=Font;catalogPage.BackColor=Bg;catalogPage.Controls.Add(layout);mainTabs.TabPages.AddRange(new[]{catalogPage,bagPage,teleportPage,doorCodesPage,actorPage,journalPage});Controls.Add(mainTabs);
    actors=new JavaScriptSerializer().Deserialize<List<ActorEntry>>(File.ReadAllText(Path.Combine(root,"actors.json"),Encoding.UTF8));
-   BuildBag();BuildTeleport();BuildActors();var jt=FeatureLayout(journalPage,2);jt.RowStyles.Add(new RowStyle(SizeType.Absolute,45));jt.RowStyles.Add(new RowStyle(SizeType.Percent,100));jt.Controls.Add(Caption("Последние 100 действий этой сессии. Отправленная команда ещё не подтверждает результат в игре."),0,0);journal.Dock=DockStyle.Fill;journal.BackColor=PanelColor;journal.ForeColor=TextColor;journal.HorizontalScrollbar=true;jt.Controls.Add(journal,0,1);
+   BuildBag();BuildTeleport();BuildDoorCodes();BuildActors();var jt=FeatureLayout(journalPage,2);jt.RowStyles.Add(new RowStyle(SizeType.Absolute,45));jt.RowStyles.Add(new RowStyle(SizeType.Percent,100));jt.Controls.Add(Caption("Последние 100 действий этой сессии. Отправленная команда ещё не подтверждает результат в игре."),0,0);journal.Dock=DockStyle.Fill;journal.BackColor=PanelColor;journal.ForeColor=TextColor;journal.HorizontalScrollbar=true;jt.Controls.Add(journal,0,1);
    mainTabs.SelectedIndexChanged+=(s,e)=>{if(mainTabs.SelectedTab==bagPage){wantInventory=true;refreshAfter=Domain.Now();}else CancelInventory();if(mainTabs.SelectedTab!=teleportPage)CancelQuestRead();else ApplyTeleportTarget();FeatureControls();};
    VisibleChanged+=(s,e)=>{if(Interactive&&mainTabs.SelectedTab==bagPage){wantInventory=true;refreshAfter=Domain.Now();}else if(!Interactive){CancelInventory();CancelQuestRead();}};
   }
@@ -203,7 +203,7 @@ namespace ZoneSpawner {
    string temporary=Path.Combine(Path.GetTempPath(),"ZoneSpawner-features-"+Guid.NewGuid().ToString("N"));Directory.CreateDirectory(temporary);
    foreach(string file in new[]{"items.json","actors.json"})File.Copy(Path.Combine(root,file),Path.Combine(temporary,file));
    try{using(var f=new SpawnForm(temporary,true)){
-    if(f.mainTabs.TabPages.Count!=5||f.bagQuantity.Maximum!=999||f.actorQuantity.Maximum!=5||f.actorDistance.Maximum!=100)throw new Exception("Feature tabs or quantity controls");
+    if(f.mainTabs.TabPages.Count!=6||f.bagQuantity.Maximum!=999||f.actorQuantity.Maximum!=5||f.actorDistance.Maximum!=100)throw new Exception("Feature tabs or quantity controls");
     f.Show();string session="test_session";Domain.Atomic(Path.Combine(f.bridge,"status.txt"),session+"\tready\t"+Domain.Now()+"\n");f.Pulse();f.mainTabs.SelectedTab=f.bagPage;f.Pulse();
     if(f.inventoryPending==""||!File.Exists(Path.Combine(f.bridge,"inventory-request.txt")))throw new Exception("Inventory tab does not request a snapshot");
     string invId=f.inventoryPending;var ammo=f.catalog.First(i=>i.Category=="Патроны"&&!i.Restricted);

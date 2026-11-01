@@ -1,0 +1,692 @@
+[
+  {
+    "Id": "sphere-tunnel",
+    "Region": "Малая Зона",
+    "Location": "Сфера",
+    "Name": "Подземный вход",
+    "Type": "Дверь",
+    "Context": "Сюжет",
+    "Code": "2765",
+    "Hint": "Панель в подземном проходе, ведущем к комплексу «Сфера».",
+    "Note": "Продвижение по основному заданию может быть необходимо для доступа.",
+    "Aliases": [
+      "Sphere",
+      "Behind Seven Seals"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "mindscrew-tunnel",
+    "Region": "Кордон",
+    "Location": "Мозголомка",
+    "Name": "Проход в тоннеле",
+    "Type": "Дверь",
+    "Context": "Сюжет",
+    "Code": "1268",
+    "Hint": "Ищи кодовую панель у закрытого прохода в тоннеле.",
+    "Note": "Связано с заданием о проходе через тоннель.",
+    "Aliases": [
+      "Mindscrew",
+      "Light at the End of the Tunnel"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "electric-field-safe",
+    "Region": "Свалка",
+    "Location": "Электрическое поле",
+    "Name": "Сейф рядом с аномалией",
+    "Type": "Сейф",
+    "Context": "Тайник",
+    "Code": "1708",
+    "Hint": "Сейф находится в постройке у аномального поля.",
+    "Note": "Проверь название места: это тайник у Электрического поля.",
+    "Aliases": [
+      "Electric Field",
+      "Electrofield"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "factory-lab",
+    "Region": "Свалка",
+    "Location": "Фабрика",
+    "Name": "Лабораторный проход",
+    "Type": "Дверь",
+    "Context": "Сюжет",
+    "Code": "2605",
+    "Hint": "Панель для прохода в подземную лабораторную часть Фабрики.",
+    "Note": "В этой же зоне есть отдельный код для блока камер.",
+    "Aliases": [
+      "Factory",
+      "Answers Come at a Price"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "factory-cells",
+    "Region": "Свалка",
+    "Location": "Фабрика",
+    "Name": "Блок камер",
+    "Type": "Дверь",
+    "Context": "Сюжет",
+    "Code": "2603",
+    "Hint": "Отдельная панель двери блока камер в подземной части Фабрики.",
+    "Note": "Не путай с кодом лабораторного прохода.",
+    "Aliases": [
+      "Factory",
+      "Path to Salvation"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "waste-checkpoint",
+    "Region": "Дикий остров",
+    "Location": "Станция переработки отходов",
+    "Name": "Дверь у КПП",
+    "Type": "Дверь",
+    "Context": "Тайник",
+    "Code": "2711",
+    "Hint": "Кодовая дверь на территории станции переработки отходов.",
+    "Note": "Тайник «Монолита» на этой станции использует другой код.",
+    "Aliases": [
+      "Waste Processing Station",
+      "Checkpoint"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "waste-monolith",
+    "Region": "Дикий остров",
+    "Location": "Станция переработки отходов",
+    "Name": "Тайник «Монолита»",
+    "Type": "Дверь",
+    "Context": "Сюжет",
+    "Code": "0505",
+    "Hint": "Панель тайника «Монолита» внутри станции.",
+    "Note": "Сюжетный контекст: прохождение через станцию. Начальный ноль обязателен.",
+    "Aliases": [
+      "Monolith",
+      "Hot on the Trail",
+      "Shift Change"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "hydrodynamics-stash",
+    "Region": "Затон",
+    "Location": "Гидродинамическая лаборатория",
+    "Name": "Тайник учёных",
+    "Type": "Дверь",
+    "Context": "Тайник",
+    "Code": "4824",
+    "Hint": "Кодовый проход к тайнику у гидродинамической лаборатории.",
+    "Note": "Доступ к области может зависеть от прохождения.",
+    "Aliases": [
+      "Hydrodynamics Lab"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "railway-door",
+    "Region": "Затон",
+    "Location": "Железнодорожный узел",
+    "Name": "Дверь ремонтной постройки",
+    "Type": "Дверь",
+    "Context": "Тайник",
+    "Code": "2468",
+    "Hint": "Кодовая дверь в зоне обслуживания железной дороги.",
+    "Note": "Не путай с лабораторией на Затоне.",
+    "Aliases": [
+      "Railway Maintenance Facility",
+      "Service Station"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "rostok-safe",
+    "Region": "Росток",
+    "Location": "Военные казармы",
+    "Name": "Военный сейф",
+    "Type": "Сейф",
+    "Context": "Тайник",
+    "Code": "195726",
+    "Hint": "Ищи сейф в военной постройке на территории района Росток.",
+    "Note": "Части комбинации можно найти в записках поблизости.",
+    "Aliases": [
+      "Rostok",
+      "Military Safe"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "chemical-arsenal",
+    "Region": "Химзавод",
+    "Location": "Арсенал «Варты»",
+    "Name": "Дверь арсенала",
+    "Type": "Дверь",
+    "Context": "Тайник",
+    "Code": "8506",
+    "Hint": "Кодовый замок двери арсенала в районе Химзавода.",
+    "Note": "Репутация и сюжет могут влиять на доступ к территории.",
+    "Aliases": [
+      "Chemical Plant",
+      "Arsenal",
+      "Ward"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "army-warehouses-lock",
+    "Region": "Химзавод",
+    "Location": "Армейские склады",
+    "Name": "Замок у тайника журналиста",
+    "Type": "Замок",
+    "Context": "Тайник",
+    "Code": "0690",
+    "Hint": "Кодовая панель в здании складов, связанном с тайником журналиста.",
+    "Note": "В руководствах этот замок называют дверью либо сейфом. Для некоторых проходов также нужен ключ; код не заменяет его.",
+    "Aliases": [
+      "Army Warehouses",
+      "Journalist Stash"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "promin-lab",
+    "Region": "Химзавод",
+    "Location": "Завод «Луч»",
+    "Name": "Подземная лаборатория",
+    "Type": "Дверь",
+    "Context": "Сюжет",
+    "Code": "1976",
+    "Hint": "Панель у входа в подземную лабораторию завода.",
+    "Note": "Контекст — основное задание на заводе «Луч».",
+    "Aliases": [
+      "Promin",
+      "Luch",
+      "CMD",
+      "Dawn of a New Day"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "intercom-tower-safe",
+    "Region": "Цементный завод",
+    "Location": "Селекторная вышка",
+    "Name": "Сейф наверху вышки",
+    "Type": "Сейф",
+    "Context": "Тайник",
+    "Code": "030794",
+    "Hint": "Сейф расположен в верхней части кирпичной башни связи.",
+    "Note": "Сохраняй начальный ноль при вводе.",
+    "Aliases": [
+      "Intercom Tower",
+      "Communication Tower"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "cooling-container",
+    "Region": "Градирни",
+    "Location": "Контейнер у градирен",
+    "Name": "Контейнер с зомбированными",
+    "Type": "Контейнер",
+    "Context": "Тайник",
+    "Code": "2777",
+    "Hint": "Закрытый грузовой контейнер на территории градирен.",
+    "Note": "После открытия за дверью могут оказаться противники.",
+    "Aliases": [
+      "Cooling Towers",
+      "Zombie Container"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "yantar-dam",
+    "Region": "Янтарь",
+    "Location": "Дамба",
+    "Name": "Тайник под дамбой",
+    "Type": "Дверь",
+    "Context": "Тайник",
+    "Code": "5578",
+    "Hint": "Ищи кодовый проход к тайнику под конструкцией дамбы.",
+    "Note": "Название области в английских руководствах — Yantar.",
+    "Aliases": [
+      "Yantar",
+      "Dam"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "radar-tunnel",
+    "Region": "Малахит",
+    "Location": "Выжигатель / Радар",
+    "Name": "Технический тоннель",
+    "Type": "Дверь",
+    "Context": "Тайник",
+    "Code": "1287975",
+    "Hint": "Крупная кодовая дверь технического тоннеля в районе Радара.",
+    "Note": "Не путай с дверью в одноимённой локации первой игры серии.",
+    "Aliases": [
+      "Brain Scorcher",
+      "Radar",
+      "Technical Tunnel"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "duga-hatch",
+    "Region": "Дуга",
+    "Location": "Объект «Дуга»",
+    "Name": "Люк",
+    "Type": "Замок",
+    "Context": "Тайник",
+    "Code": "2110",
+    "Hint": "Кодовый замок у люка на объекте «Дуга».",
+    "Note": "На объекте возможны сюжетные ограничения и опасные зоны.",
+    "Aliases": [
+      "Duga",
+      "Hatch"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "fairytale-safe",
+    "Region": "Выжженный лес",
+    "Location": "Пионерлагерь «Сказочный»",
+    "Name": "Сейф в лагере",
+    "Type": "Сейф",
+    "Context": "Тайник",
+    "Code": "1861",
+    "Hint": "Ищи сейф в постройках пионерлагеря.",
+    "Note": "Это код лагерного сейфа; замок задания об инструментах Банзая — отдельная запись.",
+    "Aliases": [
+      "Fairytale",
+      "Skazochny",
+      "Kazkovyi"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "Steam Community · справочник 05.2026",
+        "Url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3729729042"
+      }
+    ]
+  },
+  {
+    "Id": "orbita-office",
+    "Region": "Выжженный лес",
+    "Location": "Станция «Орбита» / X15",
+    "Name": "Кабинет Кайманова",
+    "Type": "Дверь",
+    "Context": "Сюжет",
+    "Code": "1995",
+    "Hint": "Кодовая дверь кабинета в лаборатории под станцией «Орбита».",
+    "Note": "У других дверей этой лаборатории отдельные комбинации.",
+    "Aliases": [
+      "Orbita",
+      "X15",
+      "Kaimanov",
+      "Subtle Matter"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "orbita-lab",
+    "Region": "Выжженный лес",
+    "Location": "Станция «Орбита» / X15",
+    "Name": "Проход на этаж B2",
+    "Type": "Дверь",
+    "Context": "Сюжет",
+    "Code": "4221",
+    "Hint": "Код аварийного доступа к закрытому этажу B2 лаборатории X15.",
+    "Note": "Вход в кабинет Кайманова использует другую комбинацию.",
+    "Aliases": [
+      "Orbita",
+      "X15"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "Gamer Guides · Decommissioning Notice",
+        "Url": "https://www.gamerguides.com/stalker-2-heart-of-chornobyl/database/notes/data/decommissioning-notice"
+      }
+    ]
+  },
+  {
+    "Id": "yanov-basement",
+    "Region": "Янов",
+    "Location": "Лесной",
+    "Name": "Дверь в подвал",
+    "Type": "Дверь",
+    "Context": "Тайник",
+    "Code": "240983",
+    "Hint": "Панель закрытого подвального прохода в Лесном.",
+    "Note": "В разных переводах название встречается как Лесной, Лесное или Lisovyi.",
+    "Aliases": [
+      "Yaniv",
+      "Yanov",
+      "Lisovyi",
+      "Fox Door",
+      "Лесное"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "dalin-safe",
+    "Region": "НИИЧАЗ",
+    "Location": "Кабинет Далина",
+    "Name": "Личный сейф",
+    "Type": "Сейф",
+    "Context": "Сюжет",
+    "Code": "2006",
+    "Hint": "Код сейфа в личном кабинете доктора Далина.",
+    "Note": "Сюжетная зона: код сам по себе не открывает доступ к кабинету.",
+    "Aliases": [
+      "SIRCAA",
+      "Dalin",
+      "A Long Overdue Visit"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "pripyat-journalist",
+    "Region": "Припять",
+    "Location": "Тайник журналиста",
+    "Name": "Дверь тайника",
+    "Type": "Дверь",
+    "Context": "Тайник",
+    "Code": "2021",
+    "Hint": "Панель двери у тайника журналиста в Припяти.",
+    "Note": "Убедись, что это именно журналистский тайник, а не соседний замок.",
+    "Aliases": [
+      "Pripyat",
+      "Prypiat",
+      "Journalist Stash"
+    ],
+    "Sources": [
+      {
+        "Title": "Stalker2Control · MIT",
+        "Url": "https://github.com/Rianvy/Stalker2Control/blob/main/Stalker2Control/Program.cs"
+      },
+      {
+        "Title": "WikiGames · список замков",
+        "Url": "https://wikigames.net/stalker-2-heart-of-chornobyl-all-stash-door-keypad-codes/"
+      }
+    ]
+  },
+  {
+    "Id": "malachite-upper-door",
+    "Region": "Малахит",
+    "Location": "Верхний этаж базы «Малахит»",
+    "Name": "Дверь к комнате с сейфом",
+    "Type": "Дверь",
+    "Context": "Тайник",
+    "Code": "4601",
+    "Hint": "Кодовая дверь на верхнем маршруте у базы «Малахит» / X17.",
+    "Note": "Данные сообщества для добавленной позднее зоны; в старых таблицах этот замок отсутствует.",
+    "Aliases": [
+      "Malachite",
+      "X17",
+      "Верхний этаж"
+    ],
+    "Sources": [
+      {
+        "Title": "Steam Community · справочник 05.2026",
+        "Url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3729729042"
+      },
+      {
+        "Title": "Сообщение игрока о двух замках",
+        "Url": "https://www.reddit.com/r/stalker/comments/1npnlwr/stalker_2_malachite_base_top_floor_door_code/"
+      }
+    ]
+  },
+  {
+    "Id": "malachite-upper-safe",
+    "Region": "Малахит",
+    "Location": "Верхний этаж базы «Малахит»",
+    "Name": "Сейф за кодовой дверью",
+    "Type": "Сейф",
+    "Context": "Тайник",
+    "Code": "0430",
+    "Hint": "Сейф в комнате за дверью верхнего маршрута у «Малахита».",
+    "Note": "Не путай код сейфа с комбинацией входной двери.",
+    "Aliases": [
+      "Malachite",
+      "X17",
+      "Верхний этаж"
+    ],
+    "Sources": [
+      {
+        "Title": "Steam Community · справочник 05.2026",
+        "Url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3729729042"
+      },
+      {
+        "Title": "Сообщение игрока о двух замках",
+        "Url": "https://www.reddit.com/r/stalker/comments/1npnlwr/stalker_2_malachite_base_top_floor_door_code/"
+      }
+    ]
+  },
+  {
+    "Id": "banzai-tools-building",
+    "Region": "Янтарь",
+    "Location": "Кладбище техники",
+    "Name": "Здание с инструментами Банзая",
+    "Type": "Дверь",
+    "Context": "Сюжет",
+    "Code": "0183",
+    "Hint": "Кодовая дверь кирпичного здания к юго-западу от кладбища техники, по заданию Банзая.",
+    "Note": "Код сообщается после сбора подсказок. Инструменты находятся здесь; мастерская самого техника расположена в другом месте. Ввод кода не завершает этап задания автоматически.",
+    "Aliases": [
+      "Banzai",
+      "Банзай",
+      "Banzai Tools"
+    ],
+    "Sources": [
+      {
+        "Title": "Shacknews · инструменты на кладбище техники",
+        "Url": "https://www.shacknews.com/article/147584/banzais-tools-locations-stalker-2"
+      },
+      {
+        "Title": "Stalker Wiki · Banzai Tools",
+        "Url": "https://stalker.fandom.com/wiki/Banzai%27s_Tools"
+      }
+    ]
+  }
+]
