@@ -69,7 +69,7 @@ END
     [IO.File]::WriteAllText($resourceSource, $resourceText, [Text.UTF8Encoding]::new($false))
     & rc.exe /nologo /fo $resourceObject $resourceSource
     if ($LASTEXITCODE -ne 0) { throw 'Launcher version resource compilation failed.' }
-    & cl.exe /nologo /LD /TC /O2 /W4 /MT "/Fo$nativeObject" "/Fe$nativeLibrary" $nativeSource $resourceObject user32.lib kernel32.lib /link /INCREMENTAL:NO "/IMPLIB:$nativeImportLibrary"
+    & cl.exe /nologo /LD /O2 /W4 /MT "/Fo$nativeObject" "/Fe$nativeLibrary" $nativeSource $resourceObject user32.lib kernel32.lib /link /INCREMENTAL:NO "/IMPLIB:$nativeImportLibrary"
     if ($LASTEXITCODE -ne 0) { throw 'MSVC launcher build failed.' }
     $exportTable = (& dumpbin.exe /nologo /exports $nativeLibrary) -join [Environment]::NewLine
     if ($LASTEXITCODE -ne 0 -or $exportTable -notmatch '\blaunch_for_pid\b' -or $exportTable -notmatch '\blaunch_menu\b') {
