@@ -21,6 +21,10 @@
 
 ## Нативный запуск вместе с игрой
 
+Для проверяемого кандидата на подпись используется MSVC x64 и Windows SDK из Visual Studio C++ Build Tools. Выполни BuildNative.ps1 с параметрами -Compiler Msvc -OutputDirectory './build'. Скрипт находит Visual Studio через vswhere и создаёт ресурс версии DLL. Единый номер в version.txt используется также для метаданных C#-сборок.
+
+Ниже сохранён прежний вариант с Tiny C Compiler для локальной разработки. У этой DLL нет ресурса версии, поэтому проверка кандидата на подпись её отклонит.
+
 Нужен x64 Tiny C Compiler, скачанный из источника проекта/доверенного дистрибутива. Компилятор не включён в репозиторий.
 
 ```powershell
@@ -64,6 +68,14 @@ WinForms EXE ↔ локальные файлы bridge ↔ UE4SS Lua ↔ функ
 Публичный каталог содержит параметры и идентификаторы, без полного текста игровых описаний. `tools/import_descriptions.py` восстанавливает описания локально. Изменённые этим инструментом описания не следует коммитить; runtime state и game files исключены `.gitignore`.
 
 ## Подготовка релиза
+
+Автоматическая проверка исходников выполняется в [Windows build for code signing](../.github/workflows/windows-build.yml). Это GitHub-hosted Windows Server 2022, штатные C# и MSVC-компиляторы, существующие WinForms/installer/Lua-проверки и отдельный артефакт из трёх собственных бинарных файлов. Test.ps1 принимает необязательный BinaryDirectory для проверки свежей сборки вместо опубликованных EXE в корне проекта.
+
+Версия 0.4.4.0 в version.txt относится к следующей сборке из исходников. Существующий опубликованный ZIP 0.4.3-preview остаётся отдельным неподписанным выпуском. Артефакт zone-spawner-unsigned-signing-input не является готовым пакетом для игроков и ещё не подписан.
+
+tools/PrepareSigningArtifact.ps1 проверяет единые ProductName / ProductVersion / FileVersion, x64 PE-заголовок и отсутствие старой подписи. Он копирует только ZoneSpawner.exe, ZoneSpawner.Setup.exe и ZoneSpawnerLauncher.dll в свежую папку unsigned-signing-input. Добавляются контрольные суммы до подписи и сведения о коммите/запуске GitHub Actions. Проверка не загружает DLL в процесс.
+
+После одобрения поставщика подписи потребуется настроить origin verification, список разрешённых файлов и ручное утверждение релиза. Полученные подписи и метки времени проверяются отдельно, а итоговые SHA256SUMS вычисляются после подписи. [Code signing policy](CODE_SIGNING.md) · [Privacy notice](PRIVACY.md).
 
 Собери EXE/DLL, прогони проверки, обнови CHANGELOG и SHA256SUMS. В пакет не включаются `bridge`, personal settings, `installed-manifest.json`, `config.lua`, логи, архивы игры/UE4SS/фикса и локально импортированные полные описания. Скриншоты в `docs/screenshots` сделаны с настоящего меню; снимки при закрытой игре подписаны соответствующим образом.
 

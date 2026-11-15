@@ -1,0 +1,48 @@
+name: Windows build for code signing
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/windows-build.yml'
+      - 'Build*.ps1'
+      - 'Test.ps1'
+      - 'version.txt'
+      - 'src/**'
+      - 'tools/BuildVersion.ps1'
+      - 'tools/PrepareSigningArtifact.ps1'
+      - 'tests/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Check out source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Build managed executables with product metadata
+        run: ./Build.ps1 -OutputDirectory ./build
+      - name: Build x64 launcher with version resource
+        run: ./BuildNative.ps1 -Compiler Msvc -OutputDirectory ./build
+      - name: Install Lua test dependency
+        run: python -m pip install -r tests/requirements.txt
+      - name: Run existing menu, installer and Lua checks
+        run: ./Test.ps1 -BinaryDirectory ./build
+      - name: Validate metadata and prepare only our own binaries
+        run: ./tools/PrepareSigningArtifact.ps1 -BinaryDirectory ./build
+      - name: Upload unsigned signing input
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: zone-spawner-unsigned-signing-input
+          path: build/unsigned-signing-input/*
+          if-no-files-found: error
+          retention-days: 14
