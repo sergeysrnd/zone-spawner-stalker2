@@ -2,7 +2,7 @@
 
 ## Current status
 
-The public 0.4.3-preview ZIP is **unsigned**. An application to the SignPath Foundation free open-source program is being prepared; the project has not been approved and no SignPath-signed release is available yet. Windows Smart App Control can block the current unsigned executables or launcher DLL.
+The public 0.4.3-preview ZIP is **unsigned**. Our application to the SignPath Foundation free open-source program was submitted on **15 November 2026** and is awaiting review; the project has not been approved and no SignPath-signed release is available yet. Windows Smart App Control can block the current unsigned executables or launcher DLL.
 
 We plan to use free code signing provided by [SignPath.io](https://signpath.io), with a certificate held by [SignPath Foundation](https://signpath.org), subject to acceptance of our application and technical setup. This statement describes the proposed provider, not an existing signing relationship.
 
@@ -22,6 +22,8 @@ The [Windows build workflow](../.github/workflows/windows-build.yml) builds C# c
 The workflow verifies the product name, common version, x64 PE format and unsigned status of each input. Only these three binaries, their SHA-256 values and build metadata are uploaded. Test executables, personal settings, game files and downloaded loader archives are excluded from the artifact.
 
 The current workflow produces an **unsigned signing input**, not a player release. It has no signing credential, does not submit to SignPath and does not publish a release. Once approved, service-side origin restrictions and explicit file/metadata rules must be configured before adding a production signing step.
+
+The first complete [successful build and existing checks](https://github.com/sergeysrnd/zone-spawner-stalker2/actions/runs/43735958957) ran on 15 November 2026. This verifies build/test readiness, not approval by the signing provider.
 
 Before distributing signed files, we must verify Authenticode signatures, the expected trusted publisher and timestamps, generate release hashes after signing, and test the installed game/mod combination with Windows protection enabled. Signing our files does not establish trust in third-party loader files, and new files may still receive SmartScreen reputation warnings.
 
