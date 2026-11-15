@@ -76,4 +76,4 @@ e4904ed8df848e5a8c55b45e24f626048f617a0b98ff4bc55f2cb89e36619af4  tools/build_lo
 8ca0ac3ff02150cae7d906fbabf39bb4b6c1a2cac65d6c6bc4f0f165ba9d7f22  tools/read_cfg.py
 6203d5b6592098995d3de5d93477a98f01ee42f8f68499b2483e4d346b2c9352  tools/read_locres.py
 838d69f5c07d98d2115b7dfcdbea54645183fff7f43f8fb4457244434245e9d9  version.txt
-a5b2c21dd70aabbd4d8c1311e7f4e2d865b7b97a8dc18243062241c9443a9fca  Р СџРЎР‚Р С•Р С‘Р В·Р Р†Р С•Р Т‘Р С‘РЎвЂљР ВµР В»РЎРЉР Р…Р С•РЎРѓРЎвЂљРЎРЉ.txt
+a5b2c21dd70aabbd4d8c1311e7f4e2d865b7b97a8dc18243062241c9443a9fca  Производительность.txt
