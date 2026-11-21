@@ -2,15 +2,15 @@
 
 ## Current status
 
-The public 0.4.3-preview ZIP is **unsigned**. Our application to the SignPath Foundation free open-source program was submitted on **15 November 2026** and is awaiting review; the project has not been approved and no SignPath-signed release is available yet. Windows Smart App Control can block the current unsigned executables or launcher DLL.
+The public 0.4.3-preview contains **unsigned binaries**. Windows 11 Smart App Control can block `ZoneSpawnerLauncher.dll`, preventing the menu from starting with the game. See the [Windows troubleshooting guide](TROUBLESHOOTING.md#windows-blocks-launcher).
 
-We plan to use free code signing provided by [SignPath.io](https://signpath.io), with a certificate held by [SignPath Foundation](https://signpath.org), subject to acceptance of our application and technical setup. This statement describes the proposed provider, not an existing signing relationship.
+SignPath Foundation declined the application submitted on **15 November 2026**. There is currently no signing provider configured for these binaries.
 
 ## Responsibility
 
 - Author and reviewer: repository maintainer [@sergeysrnd](https://github.com/sergeysrnd).
 - Proposed release signing approver: @sergeysrnd.
-- The maintainer has confirmed GitHub multi-factor authentication is enabled. SignPath account MFA must also be configured if the application is accepted.
+- The maintainer has confirmed GitHub multi-factor authentication is enabled.
 - External contributions and changes to build or signing configuration require maintainer review. Each production signing request must receive manual approval.
 
 ## Signing scope and build origin
@@ -21,7 +21,7 @@ The [Windows build workflow](../.github/workflows/windows-build.yml) builds C# c
 
 The workflow verifies the product name, common version, x64 PE format and unsigned status of each input. Only these three binaries, their SHA-256 values and build metadata are uploaded. Test executables, personal settings, game files and downloaded loader archives are excluded from the artifact.
 
-The current workflow produces an **unsigned signing input**, not a player release. It has no signing credential, does not submit to SignPath and does not publish a release. Once approved, service-side origin restrictions and explicit file/metadata rules must be configured before adding a production signing step.
+The workflow produces an **unsigned build artifact** for signing preparation. A future production signing step would require a provider with rules that verify the provenance and metadata of each file it signs.
 
 The first complete [successful build and existing checks](https://github.com/sergeysrnd/zone-spawner-stalker2/actions/runs/43735958957) ran on 15 November 2026. This verifies build/test readiness, not approval by the signing provider.
 

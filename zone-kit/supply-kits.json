@@ -1,0 +1,13 @@
+{
+  "ZoneSpawnerSupplyMed": {
+    "Medkit": 1
+  },
+  "ZoneSpawnerSupply545": {
+    "A545D": 30,
+    "Medkit": 1
+  },
+  "ZoneSpawnerSupply919": {
+    "A919D": 30,
+    "Medkit": 1
+  }
+}
