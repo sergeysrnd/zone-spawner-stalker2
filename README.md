@@ -7,7 +7,7 @@
 
 **[Скачать Zone Spawner 0.4.3 для Windows — ZIP](https://github.com/sergeysrnd/zone-spawner-stalker2/releases/download/v0.4.3-preview/ZoneSpawner-v0.4.3-preview-win64.zip)** · [Страница релиза](https://github.com/sergeysrnd/zone-spawner-stalker2/releases/tag/v0.4.3-preview)
 
-**В разработке:** внутриигровая версия на официальном Zone Kit без UE4SS, отдельного EXE и DLL. Первый этап — подготовка наборов снабжения. [Исходники и статус](zone-kit/README.md)
+**В разработке:** внутриигровая версия на официальном Zone Kit без UE4SS, отдельного EXE и DLL. Первый этап — контейнер снабжения. [План разработки](zone-kit/ROADMAP.md) · [Исходники и статус](zone-kit/README.md)
 
 **Совместимость:** нужна Steam-версия игры для Windows x64. Установщик проверен для сборки Steam **25382007** (UE **5.5.4**) и проверяет твою игру автоматически. Другие обновления игры пока не подтверждены. Это предварительная версия мода.
 
